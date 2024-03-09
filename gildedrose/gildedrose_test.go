@@ -2,6 +2,7 @@ package gildedrose_test
 
 import (
 	"kata/gildedrose"
+	"kata/gildedrose/item"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -15,7 +16,7 @@ type ExpectedItem struct {
 func TestSulfuras(t *testing.T) {
 	assert := assert.New(t)
 
-	items := []*gildedrose.Item{
+	items := []*item.Item{
 		{"Sulfuras, Hand of Ragnaros", 1, 80},
 		{"Sulfuras, Hand of Ragnaros", 0, 80},
 		{"Sulfuras, Hand of Ragnaros", -1, 80},
@@ -37,7 +38,7 @@ func TestSulfuras(t *testing.T) {
 func TestAgedBrie(t *testing.T) {
 	assert := assert.New(t)
 
-	items := []*gildedrose.Item{
+	items := []*item.Item{
 		{"Aged Brie", 1, 0},
 		{"Aged Brie", 0, 0},
 		{"Aged Brie", -1, 0},
@@ -69,7 +70,7 @@ func TestAgedBrie(t *testing.T) {
 func TestBackstagePasses(t *testing.T) {
 	assert := assert.New(t)
 
-	items := []*gildedrose.Item{
+	items := []*item.Item{
 		{"Backstage passes to a TAFKAL80ETC concert", 15, 20},
 		{"Backstage passes to a TAFKAL80ETC concert", 10, 20},
 		{"Backstage passes to a TAFKAL80ETC concert", 10, 49},
@@ -97,7 +98,7 @@ func TestBackstagePasses(t *testing.T) {
 func TestConjured(t *testing.T) {
 	assert := assert.New(t)
 
-	items := []*gildedrose.Item{
+	items := []*item.Item{
 		{"Conjured", 3, 6},
 		{"Conjured", 0, 6},
 		{"Conjured", -1, 6},
@@ -121,7 +122,7 @@ func TestConjured(t *testing.T) {
 func TestNormal(t *testing.T) {
 	assert := assert.New(t)
 
-	items := []*gildedrose.Item{
+	items := []*item.Item{
 		{"Normal", 10, 20},
 		{"Normal", 0, 20},
 		{"Normal", -1, 20},
