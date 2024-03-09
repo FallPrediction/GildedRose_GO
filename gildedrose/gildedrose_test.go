@@ -94,6 +94,30 @@ func TestBackstagePasses(t *testing.T) {
 	}
 }
 
+func TestConjured(t *testing.T) {
+	assert := assert.New(t)
+
+	items := []*gildedrose.Item{
+		{"Conjured", 3, 6},
+		{"Conjured", 0, 6},
+		{"Conjured", -1, 6},
+		{"Conjured", 3, 0},
+	}
+	expected := []*ExpectedItem{
+		{2, 4},
+		{-1, 2},
+		{-2, 2},
+		{2, 0},
+	}
+
+	gildedrose.UpdateQuality(items)
+
+	for i := 0; i < len(items); i++ {
+		assert.Equal(items[i].SellIn, expected[i].SellIn)
+		assert.Equal(items[i].Quality, expected[i].Quality)
+	}
+}
+
 func TestNormal(t *testing.T) {
 	assert := assert.New(t)
 
