@@ -6,6 +6,10 @@ type Sulfuras struct {
 	*item.Item
 }
 
+func newSulfuras(item *item.Item) *Sulfuras {
+	return &Sulfuras{Item: item}
+}
+
 func (item *Sulfuras) UpdateSellIn() {
 	// pass
 }

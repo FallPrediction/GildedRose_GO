@@ -6,6 +6,10 @@ type BackstagePasses struct {
 	*item.Item
 }
 
+func newBackstagePasses(item *item.Item) *BackstagePasses {
+	return &BackstagePasses{Item: item}
+}
+
 func (item *BackstagePasses) UpdateSellIn() {
 	item.Item.SellIn -= 1
 }

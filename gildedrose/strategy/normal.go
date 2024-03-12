@@ -6,6 +6,10 @@ type Normal struct {
 	*item.Item
 }
 
+func newNormal(item *item.Item) *Normal {
+	return &Normal{Item: item}
+}
+
 func (item *Normal) UpdateSellIn() {
 	item.Item.SellIn -= 1
 }

@@ -6,6 +6,10 @@ type Conjured struct {
 	*item.Item
 }
 
+func newConjured(item *item.Item) *Conjured {
+	return &Conjured{Item: item}
+}
+
 func (item *Conjured) UpdateSellIn() {
 	item.Item.SellIn -= 1
 }

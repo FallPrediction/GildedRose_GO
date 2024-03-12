@@ -6,6 +6,10 @@ type AgedBrie struct {
 	*item.Item
 }
 
+func newAgedBrie(item *item.Item) *AgedBrie {
+	return &AgedBrie{Item: item}
+}
+
 func (item *AgedBrie) UpdateSellIn() {
 	item.Item.SellIn -= 1
 }
