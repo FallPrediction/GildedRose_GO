@@ -1,6 +1,6 @@
 # Gilded Rose Refactoring Kata
 
-GO version for the Gilded Rose Refactoring Kata.
+GO version solution for the Gilded Rose Refactoring Kata.
 From: https://github.com/emilybache/GildedRose-Refactoring-Kata
 
 安裝套件
