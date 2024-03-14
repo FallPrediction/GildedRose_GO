@@ -22,9 +22,10 @@ go test ./...
 
 然後根據物品名稱選擇正確的strategy
 
-總共refactor兩次：
+總共refactor三次：
 - 簡單用function
 - 一種strategy一個file方便管理
+- 取得strategy改為工廠模式
 
 # Gilded Rose 需求描述
 欢迎来到镶金玫瑰(Gilded Rose)团队。如你所知，我们是主城（暴风城）中的一个小旅店，店主非常友好，名叫Allison。我们也售卖最好的物品。不幸的是，物品品质会随着销售期限的接近而不断下降。
